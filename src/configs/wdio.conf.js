@@ -21,7 +21,8 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './../features/**/*.feature'
+       './../tests/**/*.test.js'
+        // './../features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -51,10 +52,10 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome'
-    }, {
+    /* } , {
         browserName: 'firefox'
     }, {
-        browserName: 'MicrosoftEdge'
+        browserName: 'MicrosoftEdge' */
     }],
 
     //
@@ -88,7 +89,8 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-     baseUrl: 'https://www.saucedemo.com/',
+     baseUrl: 'https://localhost',
+    // baseUrl: 'https://www.saucedemo.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -112,7 +114,8 @@ export const config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'cucumber',
+    framework: 'mocha',
+   // framework: 'cucumber',
     
     //
     // The number of times to retry the entire specfile when it fails as a whole
@@ -129,6 +132,11 @@ export const config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
 
+    // Temporary mocha  - pending to delete
+    mochaOpts: {
+        ui: 'bdd',
+        timeout: 60000
+    },
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
