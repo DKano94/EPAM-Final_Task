@@ -20,7 +20,7 @@ class loginBoxComponent {
     }
 
     get errorMessage(){
-        return this.rootElement.$('//*[@id="login_button_container"]/div/form/div[3]/h3/text()');
+        return this.rootElement.$('//*[@id="login_button_container"]/div/form/div[3]/h3');
         // alternative div [class="error-message-container"]    
     }
 }
