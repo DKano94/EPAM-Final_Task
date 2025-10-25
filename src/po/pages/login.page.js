@@ -1,6 +1,6 @@
 import BasePage from './../pages/base.page.js';
 import loginBoxComponent from './../components/login/login-box.component.js';
-    
+
 class LoginPage extends BasePage{
        constructor(){
         super('')
@@ -25,19 +25,19 @@ class LoginPage extends BasePage{
         return this.loginBox.errorMessage;
     }
 
-async clearCredentials({ userName = true, password = true } = {}) {
-    if (userName) {
-        await this.loginBox.userName.click();
-        await browser.keys(['Control', 'a']);
-        await browser.keys('Backspace');
-    }
+    async clearCredentials({ userName = true, password = true } = {}) {
+        if (userName) {
+            await this.loginBox.userName.click();
+            await browser.keys(['Control', 'a']);
+            await browser.keys('Backspace');
+        }
 
-    if (password) {
-        await this.loginBox.password.click();
-        await browser.keys(['Control', 'a']);
-        await browser.keys('Backspace');
+        if (password) {
+            await this.loginBox.password.click();
+            await browser.keys(['Control', 'a']);
+            await browser.keys('Backspace');
+        }
     }
-}
 
     async fillCredentials(username, password) {
         if (username !== undefined) {
