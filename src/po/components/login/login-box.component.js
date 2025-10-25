@@ -25,4 +25,4 @@ class loginBoxComponent {
     }
 }
 
-module.exports = loginBoxComponent;
+export default new loginBoxComponent();

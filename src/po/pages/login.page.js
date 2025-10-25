@@ -1,14 +1,13 @@
-const loginBoxComponent = required('./../components/login/login-box.component');
-
-class LoginPage{
-
-    constructor(){
-        this.loginBox = new this.loginBoxComponent();
+import loginBoxComponent from './../components/login/login-box.component.js';
+    
+    class LoginPage {
+    get loginBox() {
+        return loginBoxComponent;
     }
 
-    async open(){
-        await browser.url("https://www.saucedemo.com/");
+    async open() {
+        await browser.url('https://www.saucedemo.com/');
     }
 }
 
-module.exports = LoginPage;
+export default new LoginPage();

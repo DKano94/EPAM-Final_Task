@@ -1,10 +1,11 @@
+import LoginPage from './../po/pages/login.page';
+import InventoryPage from './../po/pages/inventory.page';
 import { expect } from "expect-webdriverio";
 
 describe ('Login Page', () => {
-    const baseUrl = 'https://www.saucedemo.com/';
 
     beforeEach( async () => {
-        await browser.url(baseUrl);
+       await LoginPage.open();
     })
 
     async function clearInputValue(element) {
@@ -75,7 +76,7 @@ describe ('Login Page', () => {
         // Click "login" button
         await loginButton.click();
         // validate the title “Swag Labs” in the dashboard.
-        await browser.url(`${baseUrl}inventory.html`);
+        await InventoryPage.open();
         const title = await browser.getTitle();
         await expect(title).toBe('Swag Labs');
     })
