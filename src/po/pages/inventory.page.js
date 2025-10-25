@@ -1,6 +1,8 @@
-class InventoryPage{
-    async open(){
-        await browser.url("https://www.saucedemo.com/inventory.html");
+import BasePage from './../pages/base.page.js';
+
+class InventoryPage extends BasePage{
+    constructor(){
+        super('inventory.html')
     }
 }
 

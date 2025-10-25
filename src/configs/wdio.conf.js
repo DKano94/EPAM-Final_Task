@@ -89,8 +89,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-     baseUrl: 'https://localhost',
-    // baseUrl: 'https://www.saucedemo.com/',
+    baseUrl: 'https://www.saucedemo.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

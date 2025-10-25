@@ -1,6 +1,10 @@
+import BasePage from './../pages/base.page.js';
 import loginBoxComponent from './../components/login/login-box.component.js';
     
-class LoginPage {
+class LoginPage extends BasePage{
+       constructor(){
+        super('')
+    }
     get loginBox() {
         return loginBoxComponent;
     }
@@ -19,10 +23,6 @@ class LoginPage {
 
     get errorMessage() {
         return this.loginBox.errorMessage;
-    }
-
-    async open() {
-        await browser.url('https://www.saucedemo.com/');
     }
 
 async clearCredentials({ userName = true, password = true } = {}) {
