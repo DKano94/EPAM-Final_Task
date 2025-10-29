@@ -1,1 +1,3 @@
 node_modules
+src/configs/reports/allure-results/
+src/configs/reports/allure-report/

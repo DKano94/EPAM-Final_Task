@@ -126,9 +126,15 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: './src/configs/reports/allure-results',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+        }],
+    ],
 
-    // Temporary mocha  - pending to delete
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
